@@ -1,0 +1,830 @@
+<!doctype html>
+<html lang="en">
+<!-- This head section contains all information about the page not visible directly to user -->
+
+<head>
+  <!-- This is a title visible at a browser tab -->
+  <title>Physics Simulation - Classical Velocity Addition</title>
+
+  <!-- Common Head for every page. -->
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- This is a description of page and author. This info could be used in SEO-->
+  <meta name="description" content="Physics Simulation - Classical Velocity Addition">
+  <meta name="author" content="Nikola Jelić">
+  <!-- Settings of viewport, its width and scale-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Keywords for search engines-->
+  <meta name="keywords" content="physics simulation science">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="style/bootstrap.min.css">
+
+  <!-- Custom CSS files -->
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="libraries/jquery-3.5.1.min.js"></script>
+  <script src="libraries/bootstrap.min.js"></script>
+  <!-- End Common Head. -->
+
+  <script src="libraries/p5.js" type="text/javascript"></script>
+  <script src="libraries/p5.dom.js" type="text/javascript"></script>
+  <script src="libraries/p5.sound.js" type="text/javascript"></script>
+
+  <script src="scripts/ClassicalVelocityAddition/sketch.js" type="text/javascript"></script>
+  <script src="scripts/ClassicalVelocityAddition/distanceLabels.js" type="text/javascript"></script>
+  <script src="scripts/ClassicalVelocityAddition/playPause.js" type="text/javascript"></script>
+  <script src="scripts/ClassicalVelocityAddition/unitConverter.js" type="text/javascript"></script>
+  <script src="scripts/ClassicalVelocityAddition/drawFunction.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+  <!-- Common Header for every page. -->
+  <header>
+
+    <nav class="navbar nav-pills navbar-expand-lg ">
+
+      <!-- Navigation bar links to other pages on this website -->
+      <div class="collapse navbar-collapse justify-content-center">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link flex-sm-fill active" href="index.html">
+              <span lang="en">Introduction to Physics</span>
+              <span lang="sr">Uvod u Fiziku</span>
+              <span lang="ch">物理学导论</span>
+              <span lang="rs">Увод у Физику</span>
+              <span lang="ru">Введение в Физику</span>
+            </a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span lang="en">Classical Mechanics</span>
+              <span lang="sr">Klasična Mehanika</span>
+              <span lang="ch">经典力学</span>
+              <span lang="rs">Класична Механика</span>
+              <span lang="ru">Классическая Механика</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="Kinematics.html">
+                  <span lang="en">Kinematics</span>
+                  <span lang="sr">Kinematika</span>
+                  <span lang="ch">运动学</span>
+                  <span lang="rs">Кинематика</span>
+                  <span lang="ru">Кинематика</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Statics</span>
+                  <span lang="sr">Statika</span>
+                  <span lang="ch">静力学</span>
+                  <span lang="rs">Статика</span>
+                  <span lang="ru">Статика</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Dynamics</span>
+                  <span lang="sr">Dinamika</span>
+                  <span lang="ch">动力学</span>
+                  <span lang="rs">Динамика</span>
+                  <span lang="ru">Динамика</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Celestial Mechanics</span>
+                  <span lang="sr">Nebeska Mehanika</span>
+                  <span lang="ch">天体力学</span>
+                  <span lang="rs">Небеска Механика</span>
+                  <span lang="ru">Небесная Механика</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Conservation Laws</span>
+                  <span lang="sr">Zakoni Održanja</span>
+                  <span lang="ch">保护法</span>
+                  <span lang="rs">Закони Одржања</span>
+                  <span lang="ru">Законы Обслуживания</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span lang="en">Electromagnetism</span>
+              <span lang="sr">Elektromagnetizam</span>
+              <span lang="ch">电磁学</span>
+              <span lang="rs">Електромагнетизам</span>
+              <span lang="ru">Электромагнетизм</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Electrostatics</span>
+                  <span lang="sr">Elektrostatika</span>
+                  <span lang="ch">静电学</span>
+                  <span lang="rs">Електростатика</span>
+                  <span lang="ru">Электростатика</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Direct Current (DC)</span>
+                  <span lang="sr">Jednosmerna Struja (DC)</span>
+                  <span lang="ch">直流电（DC）</span>
+                  <span lang="rs">Једносмерна Струја (DC)</span>
+                  <span lang="ru">Постоянный Tок (DC)</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Magnetism</span>
+                  <span lang="sr">Magnetizam</span>
+                  <span lang="ch">磁性</span>
+                  <span lang="rs">Магнетизам</span>
+                  <span lang="ru">Магнетизм</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Alternating Current (AC)</span>
+                  <span lang="sr">Naizmenična Struja (AC)</span>
+                  <span lang="ch">交流电 (AC)</span>
+                  <span lang="rs">Наизменична Струја (AC)</span>
+                  <span lang="ru">Переменный Tок (AC)</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span lang="en">Thermodynamics</span>
+              <span lang="sr">Termodinamika</span>
+              <span lang="ch">热力学</span>
+              <span lang="rs">Термодинамика</span>
+              <span lang="ru">Термодинамика</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Classical Termodinamika</span>
+                  <span lang="sr">Klasična Termodinamika</span>
+                  <span lang="ch">古典术语</span>
+                  <span lang="rs">Класична Термодинамика</span>
+                  <span lang="ru">Классическая Термодинамика</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Heat Transfer and Phase Transitions</span>
+                  <span lang="sr">Prenos Toplote i Fazni Prelazi</span>
+                  <span lang="ch">传热和相变</span>
+                  <span lang="rs">Пренос Топлоте и Фазни Прелази</span>
+                  <span lang="ru">Теплообмен и Фаазовые Переходы</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span lang="en">Theory of Relativity</span>
+              <span lang="sr">Teorija Relativnosti</span>
+              <span lang="ch">相对论</span>
+              <span lang="rs">Теорија Релативности</span>
+              <span lang="ru">Теория Относительности</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Special Theory of Relativity</span>
+                  <span lang="sr">Specijalna Teorija Relativnosti</span>
+                  <span lang="ch">狭义相对论</span>
+                  <span lang="rs">Специјална Теорија Релативности</span>
+                  <span lang="ru">Специальная Теория Oтносительности</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">General Theory of Relativity</span>
+                  <span lang="sr">Opšta Teorija Relativnosti</span>
+                  <span lang="ch">广义相对论</span>
+                  <span lang="rs">Општа Теорија Релативности</span>
+                  <span lang="ru">Общая Tеория Oтносительности</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span lang="en">Quantum Mechanics</span>
+              <span lang="sr">Kvantna Mehanika</span>
+              <span lang="ch">量子力学</span>
+              <span lang="rs">Квантна Механика</span>
+              <span lang="ru">Квантовая Механика</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Quantum Nature of Electromagnetic Radiation</span>
+                  <span lang="sr">Kvantna Priroda Elektromagnetnog Zračenja</span>
+                  <span lang="ch">电磁辐射的量子性质</span>
+                  <span lang="rs">Квантна Природа Електромагнетног Зрачења</span>
+                  <span lang="ru">Квантовая Природа Электромагнитного Излучения.</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Quantum Mechanics</span>
+                  <span lang="sr">Kvantna Mehanika</span>
+                  <span lang="ch">量子力学</span>
+                  <span lang="rs">Квантна Механика</span>
+                  <span lang="ru">Квантовая Mеханика</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Quantum Theory of Atom</span>
+                  <span lang="sr">Kvantna Teorija Atoma</span>
+                  <span lang="ch">原子的量子理论</span>
+                  <span lang="rs">Квантна Теорија Атома</span>
+                  <span lang="ru">Квантовая Tеория Aтома</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Probability Waves</span>
+                  <span lang="sr">Talasna Funkcija</span>
+                  <span lang="ch">概率波</span>
+                  <span lang="rs">Таласна Функција</span>
+                  <span lang="ru">Волновая Функция</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span lang="en">Particle Physics</span>
+              <span lang="sr">Nuklearna Fizika</span>
+              <span lang="ch">粒子物理学</span>
+              <span lang="rs">Нуклеарна Физика</span>
+              <span lang="ru">Ядерная Физика</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <Properties class="dropdown-item disabled" href="#">
+                  <span lang="en">Properties of Nucleus</span>
+                  <span lang="sr">Svojstva Jezgra</span>
+                  <span lang="ch">核的性质</span>
+                  <span lang="rs">Својства Језгра</span>
+                  <span lang="ru">Основные Свойства</span>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Radioactive Decay</span>
+                  <span lang="sr">Radioaktivni Raspad</span>
+                  <span lang="ch">放射性衰变</span>
+                  <span lang="rs">Радиоактивни Распад</span>
+                  <span lang="ru">Радиоактивный Распад</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">α, β and γ Decay</span>
+                  <span lang="sr">α, β i γ Raspad</span>
+                  <span lang="ch">α、β 和 γ 衰减</span>
+                  <span lang="rs">α, β и γ Распад</span>
+                  <span lang="ru">α, β и γ Распад</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Nuclear Reactions</span>
+                  <span lang="sr">Nuklearne Reakcije</span>
+                  <span lang="ch">核反应</span>
+                  <span lang="rs">Нуклеарне Реакције</span>
+                  <span lang="ru">Ядерные Реакции</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+
+        </ul>
+        <div class="header-left">
+          <a href="index.html" title="Home"><i class="fad fa-radiation-alt header-icon"></i></a>
+          <button class="button header-language">
+            <span lang="en" title="English"><img src="assets/engl.png" width="40px" height="28px"></span>
+            <span lang="sr" title="Serbian"><img src="assets/rs.png" width="40px" height="28px"></span>
+            <span lang="ch" title="Chinese"><img src="assets/chi.png" width="40px" height="28px"></span>
+            <span lang="rs" title="Serbian Cyrillic"><img src="assets/srb.jpg" width="40px" height="28px"></span>
+            <span lang="ru" title="Russian"><img src="assets/rus.png" width="40px" height="28px"></span>
+          </button>
+        </div>
+
+      </div>
+    </nav>
+
+  </header>
+  <!-- End Common Header -->
+
+  <h1>
+    <span lang="en">Classical Velocity Addition</span>
+    <span lang="sr">Klasični Zakon Sabiranja Brzina</span>
+    <span lang="ch">经典速度加法</span>
+    <span lang="rs">Класични Закон Сабирања Брзина</span>
+    <span lang="ru">Классический Закон Сложения Скорости</span>
+  </h1>
+
+  <div class="canvasGrid">
+    <div id="canvasParent" class="canvas">
+    </div>
+
+    <div class="btnInstruction">
+      <a class="btn btn-success" role="button" data-bs-toggle="modal" data-bs-target="#modalInstructions">
+        <span lang="en">Instructions</span>
+        <span lang="sr">Instrukcije</span>
+        <span lang="ch">指示</span>
+        <span lang="rs">Инструкције</span>
+        <span lang="ru">Инструкции</span>
+      </a>
+    </div>
+
+    <div class="btnTheory">
+      <a class="btn btn-info" role="button" data-bs-toggle="modal" data-bs-target="#modalTheory">
+        <span lang="en">Theory Review</span>
+        <span lang="sr">Teorija</span>
+        <span lang="ch">理论评论</span>
+        <span lang="rs">Теорија</span>
+        <span lang="ru">Теория</span>
+      </a>
+    </div>
+    <div class="btnFormula">
+      <a class="btn btn-info" role="button" data-bs-toggle="modal" data-bs-target="#modalFormula">
+        <span lang="en">Formula Review</span>
+        <span lang="sr">Formule</span>
+        <span lang="ch">公式审查</span>
+        <span lang="rs">Формуле</span>
+        <span lang="ru">Формулы</span>
+      </a>
+    </div>
+
+    <div class="btnPractice">
+      <a class="btn btn-info" role="button" data-bs-toggle="modal" data-bs-target="#modalPractice">
+        <span lang="en">Practice Exercises</span>
+        <span lang="sr">Zadaci za Vežbu</span>
+        <span lang="ch">练习练习</span>
+        <span lang="rs">Задаци за Вежбу</span>
+        <span lang="ru">Задачи Упражнений</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalInstructions">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h2 style="text-align:center">
+            <span lang="en">Instructions</span>
+            <span lang="sr">Instrukcije</span>
+            <span lang="ch">指示</span>
+            <span lang="rs">Инструкције</span>
+            <span lang="ru">Инструкции</span>
+          </h2>
+          <h3 style="text-align:center">
+            <span lang="en">Classical Velocity Addition</span>
+            <span lang="sr">Klasični Zakon Sabiranja Brzina</span>
+            <span lang="ch">经典速度加法</span>
+            <span lang="rs">Класични Закон Сабирања Брзина</span>
+            <span lang="ru">Классический Закон Сложения Скорости</span>
+          </h3>
+          <br>
+          <p>
+            <span lang="en">In order to produce motion, you have to fill TWO out of the fields/values (Boat's Velocity,
+              River's Velocity OR Resulting Velocity, so that the third value can be calculated.</span>
+            <span lang="sr">Kako bi ste pokrenuli simulaciju morate uneti barem DVE od tri vrednosti/polja (Brzina
+              Broda, Brzina Reke ILI Rezultantna Brina, kako bi treća vrednost mogla da se izračuna.</span>
+            <span lang="ch">为了产生运动，您必须填写两个字段/值（船的速度、河流的速度或结果速度，以便可以计算第三个值。</span>
+            <span lang="rs">Како би сте покренули симулацију морате унети барем ДВЕ од три вредности/поља (Брзина
+              Брода, Брзина Реке ИЛИ Резултантна Брина, како би трећа вредност могла да се израчуна.</span>
+            <span lang="ru">Чтобы запустить моделирование, вы должны ввести как минимум ДВА из трех значений / полей (Скорость
+              Корабль, скорость реки ИЛИ уход за результатами, чтобы можно было вычислить третье значение.</span>
+            <br>
+            <span lang="en">These values can be observed in real time in dialog box above the boat.</span>
+            <span lang="sr">Ove vrednosti se mogu pratit u realnom vremenu pogledom na oblačić iznad broda.</span>
+            <span lang="ch">这些值可以在船上方的对话框中实时观察。</span>
+            <span lang="rs">Ове вредности се могу пратит у реалном времену погледом на облачић изнад брода.</span>
+            <span lang="ru">Эти значения можно отслеживать в реальном времени, глядя на облако над кораблем.</span>
+          </p>
+          <li>
+            <span lang="en">Press the PLAY button in the Simulation Control panel to animate the boat.</span>
+            <span lang="sr">Pritisnite PLAY dugme među kontrolama kako biste pokrenuli brodić.</span>
+            <span lang="ch">按“模拟控制”面板中的“播放”按钮为船设置动画。</span>
+            <span lang="rs">Притисните PLAY дугме међу контролама како бисте покренули бродић.</span>
+            <span lang="ru">Нажмите кнопку PLAY между элементами управления, чтобы запустить лодку.</span>
+          </li>
+          <li>
+            <span lang="en">Use the unit selector to convert the values to different units.</span>
+            <span lang="sr">Koristite selektor jedinica kako biste pretovrili vrednosti u željene jedinice mere.</span>
+            <span lang="ch">使用单位选择器将值转换为不同的单位。</span>
+            <span lang="rs">Користите селектор јединица како бисте претоврили вредности у жељене јединице мере.</span>
+            <span lang="ru">Используйте переключатель единиц измерения, чтобы преобразовать значения в желаемые единицы измерения.</span>
+          </li>
+          <li>
+            <span lang="en">Use direction selector to switch between two sailing directions (downstream/upstream).</span>
+            <span lang="sr">Koristite selektor smera kako biste izabrali smer plovidbe (nizvodno/uzvodno).</span>
+            <span lang="ch">使用方向选择器在两个航行方向（下游/上游）之间切换。</span>
+            <span lang="rs">Користите селектор смера како бисте изабрали смер пловидбе (низводно/узводно).</span>
+            <span lang="ru">Используйте переключатель направления для выбора направления навигации (вниз / вверх по течению).</span>
+          </li>
+
+          <li>
+            <span lang="en">Press speaker button to mute/unmute the sound.</span>
+            <span lang="sr">Pritisnite dugme sa zvičnikom kako biste mutirali/odmutirali zvuk.</span>
+            <span lang="ch">按扬声器按钮静音/取消静音。</span>
+            <span lang="rs">Притисните дугме са звичником како бисте мутирали/одмутирали звук.</span>
+            <span lang="ru">Нажмите кнопку динамика, чтобы отключить / отключить звук.</span>
+          </li>
+          <li>
+            <span lang="en">Use slider to control the volume of the sound.</span>
+            <span lang="sr">Koristite slider za kontrolu jačine zvuka.</span>
+            <span lang="ch">使用滑块控制声音的音量。</span>
+            <span lang="rs">Користите слидер за контролу јачине звука.</span>
+            <span lang="ru">Используйте ползунок для регулировки громкости.</span>
+          </li>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            <span lang="en">Close</span>
+            <span lang="sr">Zatvori</span>
+            <span lang="ch">关闭</span>
+            <span lang="rs">Затвори</span>
+            <span lang="ru">Закрой</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalTheory">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h2 style="text-align:center">
+            <span lang="en">Theory Review</span>
+            <span lang="sr">Pregled Teorije</span>
+            <span lang="ch">理论评论</span>
+            <span lang="rs">Преглед Теорије</span>
+            <span lang="ru">Обзор Tеории</span>
+          </h2>
+          <h3 style="text-align:center">
+            <span lang="en">Classical Velocity Addition</span>
+            <span lang="sr">Klasični Zakon Sabiranja Brzina</span>
+            <span lang="ch">经典速度加法</span>
+            <span lang="rs">Класични Закон Сабирања Брзина</span>
+            <span lang="ru">Классический Закон Сложения Скорости</span>
+          </h3>
+          <br>
+          <p>
+            <span lang="en">We can say that motion is relative (not to be confused with velocity addition in
+              relativistic physics).
+              Motion of the same object varies in different frames of reference. The value of velocity depends on the
+              choice of a frame of reference.</span>
+            <span lang="sr">Možemo reći da je kretanje relativno (ne mešaj sa slaganjem brina u relativističkoj fizici).
+              Kretanje istog tela se razlikuje u različitim referetnim sistemima. Vrednost brzine zavisi od
+              izbora referentnog sistema.
+            </span>
+            <span lang="ch">我们可以说运动是相对的（不要与相对论物理学中的速度相加混淆）。
+              同一物体的运动在不同的参考系中是不同的。速度的值取决于
+              参照系的选择。</span>
+            <span lang="rs">Можемо рећи да је кретање релативно (не мешај са слагањем брина у релативистичкој физици).
+              Кретање истог тела се разликује у различитим реферетним системима. Вредност брзине зависи од
+              избора референтног система.</span>
+            <span lang="ru">Мы можем сказать, что движение относительно (не путайте его со сложностями в релятивистской физике).
+              Движение одного и того же тела отличается в разных системах отсчета. Значение скорости зависит от
+              выбор системы отсчета.</span>
+          </p>
+          <p>
+            <span lang="en">Example: A boat has one speed relative to the river while it has another speed relative to
+              the shore.</span>
+            <span lang="sr">Primer: Brodić ima jednu brzinu u odnosu na reku dok ima drugu brzinu u odnosu na
+              obalu.</span>
+            <span lang="ch">示例：一艘船相对于河流有一个速度，而相对于海岸有另一个速度。</span>
+            <span lang="rs">Пример: Бродић има једну брзину у односу на реку док има другу брзину у односу на
+              обалу.</span>
+            <span lang="ru">Пример: Лодка имеет одну скорость по отношению к реке, в то время как у нее другая скорость по отношению к реке.
+              побережье.</span>
+          <ol>
+            <li>
+              <span lang="en">If the boat’s engine is turned off, then the velocity relative to the shore is equal to
+                the velocity of
+                the river, and relative to the river it is equal to zero.</span>
+              <span lang="sr">Ukoliko je motor broda isključen, onda je brzina u odnosu na obalu jednaka brzini reke, a
+                u odnosu na reku je jednaka nuli.</span>
+              <span lang="ch">如果船的发动机关闭，则相对于岸的速度等于
+                河流，相对于河流它等于零。</span>
+              <span lang="rs">Уколико је мотор брода искључен, онда је брзина у односу на обалу једнака брзини реке, а
+                у односу на реку је једнака нули.</span>
+              <span lang="ru">Если двигатель корабля выключен, то скорость относительно берега равна скорости реки, т.е.
+                по отношению к реке равен нулю.</span>
+            </li>
+            <li>
+              <span lang="en">If the boat’s engine is turned on and it sails downstream, then the velocity relative to
+                the shore is
+                equal to the sum of the boat’s and the river’s velocity, and relative to the river it is equal to the
+                velocity of the boat.</span>
+              <span lang="sr">Ukoliko je motor broda uključen i plovi nizvodno, onda je brzina broda u odnosu na obalu
+                jednaka sumi brzine broda i brzine reke, a u brzina odnosu na reku je jednaka brzini broda.
+              </span>
+              <span lang="ch">如果船的发动机打开，向下游航行，那么相对于海岸的速度为
+                等于船的速度和河流的速度之和，相对于河流，它等于船的速度。</span>
+                <span lang="rs">Уколико је мотор брода укључен и плови низводно, онда је брзина брода у односу на обалу
+                  једнака суми брзине брода и брзине реке, а у брзина односу на реку је једнака брзини брода.</span>
+                <span lang="ru">Если двигатель корабля работает и плывет по течению, то скорость корабля относительно берега.
+                  равна сумме скорости корабля и скорости реки, а скорость по отношению к реке равна скорости корабля.</span>
+            </li>
+            <li>
+              <span lang="en">If the boat’s engine is turned on and it sails upstream, then the velocity relative to the
+                shore is equal
+                to the difference of the boat’s velocity and the river’s velocity, and relative to the river it is equal
+                to the
+                sum of the river’s and boat’s velocities).</span>
+              <span lang="sr">Ukoliko je motor broda uključen i brod plovi uzvodno, onda je brzina broda u odnosu na
+                obalu
+                jednaka razlici brzine broda i brine reke, dok je brzina broda u odnosu na reku jednaka zbiru
+                brzine reke i brzine broda.</span>
+              <span lang="ch">如果船的引擎打开并逆流航行，那么相对于海岸的速度是相等的
+                船的速度和河流的速度之差，相对于河流，它等于
+                河流和船只的速度之和）。</span>
+              <span lang="rs">Уколико је мотор брода укључен и брод плови узводно, онда је брзина брода у односу на
+                обалу једнака разлици брзине брода и брине реке, док је брзина брода у односу на реку једнака збиру
+                брзине реке и брзине брода.</span>
+              <span lang="ru">Если двигатель корабля работает и судно движется против течения, то скорость корабля определяется относительно
+                берег равен разнице между скоростью корабля и скоростью реки, а скорость корабля по отношению к реке равна сумме
+                скорости реки и скорости судов.</span>
+            </li>
+          </ol>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            <span lang="en">Close</span>
+            <span lang="sr">Zatvori</span>
+            <span lang="ch">关闭</span>
+            <span lang="rs">Затвори</span>
+            <span lang="ru">Закрой</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalFormula">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h2 style="text-align:center">
+            <span lang="en">Formula Review</span>
+            <span lang="sr">Pregled Formula</span>
+            <span lang="ch">公式审查</span>
+            <span lang="rs">Преглед Формула</span>
+            <span lang="ru">Обзор Формулы</span>
+          </h2>
+          <br>
+          <h3 style="text-align:center">
+            <span lang="en">Classical Velocity Addition</span>
+            <span lang="sr">Klasični Zakon Sabiranja Brzina</span>
+            <span lang="ch">经典速度加法</span>
+            <span lang="rs">Класични Закон Сабирања Брзина</span>
+            <span lang="ru">Классический Закон Сложения Скорости</span>
+          </h3>
+          <br>
+          <p style="text-align:center">
+            <span lang="en">Classical Velocity Addition can be described with following physical quantities:</span>
+            <span lang="sr">Klasični Zakon Sabiranja Brzina se može opisati sledećim fizičkim vrednostima:</span>
+            <span lang="ch">经典速度加法可以用以下物理量来描述：</span>
+            <span lang="rs">Класични Закон Сабирања Брзина се може описати следећим физичким вредностима:</span>
+            <span lang="ru">Классический Закон Сложения Б корости можно описать следующими физическими величинами:</span>
+          </p>
+          <p style="text-align:center"><b>𝒱<sub>1</sub></b> - <span lang="en">velocity of body 1;</span><span lang="sr">brzina tela 1;</span><span lang="ch">身体的速度 1;</span><span lang="rs">брзина тела 1;</span><span lang="ru">скорость тела 1;</span>
+            <b>𝒱<sub>2</sub></b> - <span lang="en">velocity of body 2;</span><span lang="sr">brzina tela 2;</span><span lang="ch">身体的速度 2;</span><span lang="rs">брзина тела 2;</span><span lang="ru">скорость тела 2;</span>
+            <b>𝒱<sub>R</sub></b> - <span lang="en">resulting velocity;</span><span lang="sr">rezultantna brzina</span><span lang="ch">产生的速度；</span><span lang="rs">резултантна брзина</span><span lang="ru">результирующая скорость</span></p>
+          <hr>
+          <p style="text-align:center">
+            <span lang="en">Below are variations of the same formula that can be used to calculate any of those three
+              values if the other two values and/or their directions are given/provided:</span>
+            <span lang="sr">Ispod se nalaze varijacije iste formule koje se mogu koristiti za izračunavanje bilo koje od
+              tri vrednosti dokle god su preostale dve vrednosti i/ili njihovi pravci dati:</span>
+            <span lang="ch">以下是相同公式的变体，如果给出/提供了其他两个值和/或它们的方向，则可用于计算这三个值中的任何一个：</span>
+            <span lang="rs">Испод се налазе варијације исте формуле које се могу користити за израчунавање било које од
+              три вредности докле год су преостале две вредности и/или њихови правци дати:</span>
+           <span lang="ru">Ниже представлены варианты той же формулы, которые можно использовать для вычисления любого из
+            три значения, если указаны оставшиеся два значения и / или их направления:</span>
+          </p>
+          <br>
+          <p style="text-align:center">
+            <span lang="en">If bodies move in the same direction:</span>
+            <span lang="sr">Ukoliko se tela kreću u istom smeru:</span>
+            <span lang="ch">如果物体向同一方向移动：</span>
+            <span lang="rs">Уколико се тела крећу у истом смеру:</span>
+            <span lang="ru">Если тела движутся в одном направлении:</span>
+          </p>
+          <p style="text-align:center"><b>𝒱<sub>R</sub> = 𝒱<sub>1</sub> + 𝒱<sub>2</sub>
+              [<sup>m</sup>&frasl;<sub>s</sub>] <br> 𝒱<sub>1</sub> = 𝒱<sub>R</sub> - 𝒱<sub>2</sub>
+              [<sup>m</sup>&frasl;<sub>s</sub>] <br> 𝒱<sub>2</sub> = 𝒱<sub>R</sub> - 𝒱<sub>1</sub>
+              [<sup>m</sup>&frasl;<sub>s</sub>]</b></p>
+          <br>
+          <p style="text-align:center">
+            <span lang="en">If bodies move in the opposite direction:</span>
+            <span lang="sr">Ukoliko se tela kreću u suprotnom smeru:</span>
+            <span lang="ch">如果物体向相反方向移动：</span>
+            <span lang="rs">Уколико се тела крећу у супротном смеру:</span>
+            <span lang="ru">Если тела движутся в противоположном направлении:</span>
+          </p>
+          <p style="text-align:center"><b>𝒱<sub>R</sub> = 𝒱<sub>2</sub> - 𝒱<sub>1</sub>
+              [<sup>m</sup>&frasl;<sub>s</sub>] <br> 𝒱<sub>1</sub> = 𝒱<sub>2</sub> - 𝒱<sub>R</sub>
+              [<sup>m</sup>&frasl;<sub>s</sub>] <br> 𝒱<sub>2</sub> = 𝒱<sub>1</sub> - 𝒱<sub>R</sub>
+              [<sup>m</sup>&frasl;<sub>s</sub>]</b></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            <span lang="en">Close</span>
+            <span lang="sr">Zatvori</span>
+            <span lang="ch">关闭</span>
+            <span lang="rs">Затвори</span>
+            <span lang="ru">Закрой</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalPractice">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h2 style="text-align:center">
+            <span lang="en">Practice Exercises</span>
+            <span lang="sr">Zadaci za Vežbu</span>
+            <span lang="ch">练习练习</span>
+            <span lang="rs">Задаци за Вежбу</span>
+            <span lang="ru">Задачи Упражнений</span>
+          </h2>
+          <br>
+          <h3 style="text-align:center">
+            <span lang="en">Classical Velocity Addition</span>
+            <span lang="sr">Klasični Zakon Sabiranja Brzina</span>
+            <span lang="rs">Класични Закон Сабирања Брзина</span>
+            <span lang="ru">Классический Закон Сложения Скорости</span>
+          </h3>
+          <br>
+          <p style="text-align:left"><em><span lang="en">Problem 1: </span><span lang="sr">Zadatak 1: </span><span
+                lang="ch">问题一: </span><span lang="rs">Задатак 1: </span><span lang="ru">Задание 1: </span></em>
+            <span lang="en">Speed of a boat relative to water is 2 [<sup>m</sup>&frasl;<sub>s</sub>]. Speed of the river
+              is 1.5 [<sup>m</sup>&frasl;<sub>s</sub>]. What is the speed of the boat relative to shore if it is sailing
+              downstream?</span>
+            <span lang="sr">Brzina čamca u odnosu na vodu je 2 [<sup>m</sup>&frasl;<sub>s</sub>]. Brzina reke je 1.5
+              [<sup>m</sup>&frasl;<sub>s</sub>]. Kolika je brzina broda u odnosu na obalu ako brod plovi
+              nizvodno?</span>
+            <span lang="ch">船相对于水的速度是 2 [<sup>m</sup>&frasl;<sub>s</sub>]. 河流的速度是 1.5 [<sup>m</sup>&frasl;<sub>s</sub>].
+              如果船向下游航行，船相对于海岸的速度是多少？</span>
+            <span lang="rs">Брзина чамца у односу на воду је 2 [<sup>m</sup>&frasl;<sub>s</sub>]. Брзина реке је 1.5
+                [<sup>m</sup>&frasl;<sub>s</sub>]. Колика је брзина брода у односу на обалу ако брод плови низводно?</span>
+            <span lang="ru">Скорость лодки относительно воды равна 2 [<sup>m</sup>&frasl;<sub>s</sub>]. Скорость реки 1,5
+                [<sup>m</sup>&frasl;<sub>s</sub>]. Какова скорость корабля относительно берега, если корабль идет вниз по течению?</span>
+          </p>
+          <br>
+          <p style="text-align:left"><em><span lang="en">Problem 2: </span><span lang="sr">Zadatak 2: </span><span
+                lang="ch">问题二: </span><span lang="rs">Задатак 2: </span><span lang="ru">Задание 2: </span></em>
+            <span lang="en">Speed of a boat relative to water is 4 [<sup>m</sup>&frasl;<sub>s</sub>]. Speed of the river
+              is 1.5 [<sup>m</sup>&frasl;<sub>s</sub>]. What is the speed of the boat relative to shore if it is sailing
+              upstream?</span>
+            <span lang="sr">Brzina broda u odnosu na reku je 4 [<sup>m</sup>&frasl;<sub>s</sub>]. Brzina reke je 1.5
+              [<sup>m</sup>&frasl;<sub>s</sub>]. Kolika je brzina broda u odnosu na reku ako brod plovi uzvodno?</span>
+            <span lang="ch">船相对于水的速度是 4 [<sup>m</sup>&frasl;<sub>s</sub>]. 河流的速度是 1.5 [<sup>m</sup>&frasl;<sub>s</sub>].
+              如果船向上游航行，船相对于海岸的速度是多少？</span>
+            <span lang="rs">Брзина брода у односу на реку је 4 [<sup>m</sup>&frasl;<sub>s</sub>]. Брзина реке је 1.5
+                [<sup>m</sup>&frasl;<sub>s</sub>]. Колика је брзина брода у односу на реку ако брод плови узводно?</span>
+            <span lang="ru">Скорость корабля относительно реки 4 [<sup>m</sup>&frasl;<sub>s</sub>]. Скорость реки 1,5
+                [<sup>m</sup>&frasl;<sub>s</sub>]. Какова скорость корабля по отношению к реке, если корабль плывет против течения?</span>
+          </p>
+          <br>
+          <p style="text-align:left"><em><span lang="en">Problem 3: </span><span lang="sr">Zadatak 3: </span><span
+                lang="ch">问题三: </span><span lang="rs">Задатак 3: </span><span lang="ru">Задание 3: </span></em>
+            <span lang="en">Speed of a boat relative to water is 3 [<sup>m</sup>&frasl;<sub>s</sub>], and relative to
+              shore is 2 [<sup>m</sup>&frasl;<sub>s</sub>]. In what direction does the boat sail? What is the speed of
+              the river?</span>
+            <span lang="sr">Brzina čamca u odnosu na reku je 3 [<sup>m</sup>&frasl;<sub>s</sub>], dok je u odnosu na
+              obalu 2 [<sup>m</sup>&frasl;<sub>s</sub>]. U kom smeru plovi brod? Koja je brzina reke?</span>
+            <span lang="ch">船相对于水的速度是 3 [<sup>m</sup>&frasl;<sub>s</sub>], 并且相对于海岸是 2 [<sup>m</sup>&frasl;<sub>s</sub>].
+              船向哪个方向航行？ 河流的速度是多少？</span>
+            <span lang="rs">Брзина чамца у односу на реку је 3 [<sup>m</sup>&frasl;<sub>s</sub>], док је у односу на
+              обалу 2 [<sup>m</sup>&frasl;<sub>s</sub>]. У ком смеру плови брод? Која је брзина реке?</span>
+            <span lang="ru">Скорость лодки по отношению к реке 3 [<sup>m</sup>&frasl;<sub>s</sub>], а по отношению к 
+              берегу 2 [<sup>m</sup>&frasl;<sub>s</sub>]. В каком направлении плывет корабль? Какая скорость реки?</span>
+          </p>
+          <br>
+          <p style="text-align:left"><em><span lang="en">Problem 4: </span><span lang="sr">Zadatak 4: </span><span
+                lang="ch">问题四: </span><span lang="rs">Задатак 4: </span><span lang="ru">Задание 4: </span></em>
+            <span lang="en">Speed of an airplane relative to air is 50 [<sup>m</sup>&frasl;<sub>s</sub>]. Speed of wind
+              relative to earth is 15 [<sup>m</sup>&frasl;<sub>s</sub>]. What is the speed of the airplane relative to
+              earth if it is flying: a) downwind b) upwind?</span>
+            <span lang="sr">Brzina aviona u odnosu na vazduh je 50 [<sup>m</sup>&frasl;<sub>s</sub>]. Brzina vetra u
+              odnosu na zemlju je 15 [<sup>m</sup>&frasl;<sub>s</sub>]. Kolika je brzina aviona u odnosu na zemlju u
+              koliko leti: a) niz vetar b) uz vetar?</span>
+            <span lang="ch">飞机相对于空气的速度是 50 [<sup>m</sup>&frasl;<sub>s</sub>]. 风相对于地球的速度为 15
+              [<sup>m</sup>&frasl;<sub>s</sub>]. 如果飞机在飞行，飞机相对于地球的速度是多少： a) 顺风 b) 逆风？</span>
+            <span lang="rs">Брзина авиона у односу на ваздух је 50 [<sup>m</sup>&frasl;<sub>s</sub>]. Брзина ветра у
+              односу на земљу је 15 [<sup>m</sup>&frasl;<sub>s</sub>]. Колика је брзина авиона у односу на земљу у
+              колико лети: а) низ ветар б) уз ветар?</span>
+            <span lang="ru">Скорость самолета по отношению к воздуху 50 [<sup>m</sup>&frasl;<sub>s</sub>]. Скорость ветра в
+              по отношению к стране 15 [<sup>m</sup>&frasl;<sub>s</sub>]. Какова скорость самолета по отношению к земле в
+              сколько летит: а) по ветру б) по ветру?</span>
+          </p>
+          <br>
+          <p style="text-align:left"><em><span lang="en">Problem 5: </span><span lang="sr">Zadatak 5: </span><span
+                lang="ch">问题五: </span><span lang="rs">Задатак 5: </span><span lang="ru">Задание 5: </span></em>
+            <span lang="en">A and B are two trains, moving parallel to each other. Speed of train A is 60
+              [<sup>km</sup>&frasl;<sub>h</sub>] while the speed of train B is 75 [<sup>km</sup>&frasl;<sub>h</sub>].
+              What is the speed of one train relative to the other if they are moving in the same direction? What is the
+              speed of one train relative to the other if they are moving in the opposite direction?</span>
+            <span lang="sr">A i B su dva voza, koja se kreću paralelno jedan u odnosu na drugog. Brzina voza A je 60
+              [<sup>km</sup>&frasl;<sub>h</sub>] dok je brzina voza B 75 [<sup>km</sup>&frasl;<sub>h</sub>]. Kolika je
+              brzina jednog voza u odnosu na drugi u koliko se oni kreću u istom smeru? Kolika je brzina jednog voza u
+              odnosu na drugi u koliko se oni kreću u suprotnom smeru?</span>
+            <span lang="ch">A 和 B 是两列火车，彼此平行移动。 列车 A 的速度为 60 [<sup>km</sup>&frasl;<sub>h</sub>] 而列车 B 的速度为 75
+              [<sup>km</sup>&frasl;<sub>h</sub>]. 如果一列火车向同一方向移动，那么它们相对于另一列火车的速度是多少？
+              如果一列火车向相反方向行驶，它们相对于另一列火车的速度是多少？</span>
+            <span lang="rs">А и Б су два воза, која се крећу паралелно један у односу на другог. Брзина воза А је 60
+              [<sup>km</sup>&frasl;<sub>h</sub>] док је брзина воза Б 75 [<sup>km</sup>&frasl;<sub>h</sub>]. Колика је
+              брзина једног воза у односу на други у колико се они крећу у истом смеру? Колика је брзина једног воза у
+              односу на други у колико се они крећу у супротном смеру?</span>
+            <span lang="ru">A и B - два поезда, идущие параллельно друг другу. Скорость поезда A составляет 60
+              [<sup>km</sup>&frasl;<sub>h</sub>] при скорости поезда B 75 [<sup>km</sup>&frasl;<sub>h</sub>]. Насколько она велика
+              скорость одного поезда по отношению к другому, как далеко они движутся в одном направлении? Какая скорость у одного поезда в
+              по отношению к другим в какой степени они движутся в противоположном направлении?</span>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            <span lang="en">Close</span>
+            <span lang="sr">Zatvori</span>
+            <span lang="ch">关闭</span>
+            <span lang="rs">Затвори</span>
+            <span lang="ru">Закрой</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Common footer for every page. -->
+  <!-- Footer bar (containing 2 non-functioning links) using Bootstrap classes for styling. -->
+  <footer class="navbar fixed-bottom nav-tabs  bg-white navbar-expand flex-column flex-sm-row justify-content-center">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link flex-sm-fill" href="about.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link flex-sm-fill" href="faq.html">FAQ</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link flex-sm-fill" href="http://www.ipho-new.org/" target="_blank">iPhO</a>
+      </li>
+    </ul>
+  </footer>
+  <!-- End Common footer -->
+  <script src="scripts/language.js"></script>
+
+</body>
+
+<!-- <script>
+  $(document).ready(function () {
+
+    //Make the modal appear on page load
+    $('#modalTheory').modal('show')
+
+  });
+</script> -->
+
+</html>

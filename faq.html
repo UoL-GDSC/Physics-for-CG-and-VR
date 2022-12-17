@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+<!-- This head section contains all information about the page not visible directly to user. -->
+
+<head>
+  <!-- This is a title visible at a browser tab -->
+  <title>Physics Simulation FAQ</title>
+
+  <!-- Common Head for every page. -->
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- This is a description of page and author. This info could be used in SEO-->
+  <meta name="description" content="Physics Simulation - Index Page">
+  <meta name="author" content="Nikola Jelić">
+  <!-- Settings of viewport, its width and scale-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Keywords for search engines-->
+  <meta name="keywords" content="physics simulation science">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="style/bootstrap.min.css">
+
+  <!-- Custom CSS files -->
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="libraries/jquery-3.5.1.min.js"></script>
+  <script src="libraries/bootstrap.min.js"></script>
+  <!-- End Common Head. -->
+
+</head>
+
+<body>
+
+  <!-- Common Header for every page. -->
+  <header>
+
+    <nav class="navbar nav-pills navbar-expand-lg ">
+
+      <!-- Navigation bar links to other pages on this website -->
+      <div class="collapse navbar-collapse justify-content-center">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link flex-sm-fill active" href="index.html">
+              <span lang="en">Introduction to Physics</span>
+              <span lang="sr">Uvod u Fiziku</span>
+              <span lang="ch">物理学导论</span>
+              <span lang="rs">Увод у Физику</span>
+              <span lang="ru">Введение в Физику</span>
+            </a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span lang="en">Classical Mechanics</span>
+              <span lang="sr">Klasična Mehanika</span>
+              <span lang="ch">经典力学</span>
+              <span lang="rs">Класична Механика</span>
+              <span lang="ru">Классическая Механика</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="Kinematics.html">
+                  <span lang="en">Kinematics</span>
+                  <span lang="sr">Kinematika</span>
+                  <span lang="ch">运动学</span>
+                  <span lang="rs">Кинематика</span>
+                  <span lang="ru">Кинематика</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Statics</span>
+                  <span lang="sr">Statika</span>
+                  <span lang="ch">静力学</span>
+                  <span lang="rs">Статика</span>
+                  <span lang="ru">Статика</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Dynamics</span>
+                  <span lang="sr">Dinamika</span>
+                  <span lang="ch">动力学</span>
+                  <span lang="rs">Динамика</span>
+                  <span lang="ru">Динамика</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Celestial Mechanics</span>
+                  <span lang="sr">Nebeska Mehanika</span>
+                  <span lang="ch">天体力学</span>
+                  <span lang="rs">Небеска Механика</span>
+                  <span lang="ru">Небесная Механика</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Conservation Laws</span>
+                  <span lang="sr">Zakoni Održanja</span>
+                  <span lang="ch">保护法</span>
+                  <span lang="rs">Закони Одржања</span>
+                  <span lang="ru">Законы Обслуживания</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span lang="en">Electromagnetism</span>
+              <span lang="sr">Elektromagnetizam</span>
+              <span lang="ch">电磁学</span>
+              <span lang="rs">Електромагнетизам</span>
+              <span lang="ru">Электромагнетизм</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Electrostatics</span>
+                  <span lang="sr">Elektrostatika</span>
+                  <span lang="ch">静电学</span>
+                  <span lang="rs">Електростатика</span>
+                  <span lang="ru">Электростатика</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Direct Current (DC)</span>
+                  <span lang="sr">Jednosmerna Struja (DC)</span>
+                  <span lang="ch">直流电（DC）</span>
+                  <span lang="rs">Једносмерна Струја (DC)</span>
+                  <span lang="ru">Постоянный Tок (DC)</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Magnetism</span>
+                  <span lang="sr">Magnetizam</span>
+                  <span lang="ch">磁性</span>
+                  <span lang="rs">Магнетизам</span>
+                  <span lang="ru">Магнетизм</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Alternating Current (AC)</span>
+                  <span lang="sr">Naizmenična Struja (AC)</span>
+                  <span lang="ch">交流电 (AC)</span>
+                  <span lang="rs">Наизменична Струја (AC)</span>
+                  <span lang="ru">Переменный Tок (AC)</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span lang="en">Thermodynamics</span>
+              <span lang="sr">Termodinamika</span>
+              <span lang="ch">热力学</span>
+              <span lang="rs">Термодинамика</span>
+              <span lang="ru">Термодинамика</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Classical Termodinamika</span>
+                  <span lang="sr">Klasična Termodinamika</span>
+                  <span lang="ch">古典术语</span>
+                  <span lang="rs">Класична Термодинамика</span>
+                  <span lang="ru">Классическая Термодинамика</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Heat Transfer and Phase Transitions</span>
+                  <span lang="sr">Prenos Toplote i Fazni Prelazi</span>
+                  <span lang="ch">传热和相变</span>
+                  <span lang="rs">Пренос Топлоте и Фазни Прелази</span>
+                  <span lang="ru">Теплообмен и Фаазовые Переходы</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span lang="en">Theory of Relativity</span>
+              <span lang="sr">Teorija Relativnosti</span>
+              <span lang="ch">相对论</span>
+              <span lang="rs">Теорија Релативности</span>
+              <span lang="ru">Теория Относительности</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Special Theory of Relativity</span>
+                  <span lang="sr">Specijalna Teorija Relativnosti</span>
+                  <span lang="ch">狭义相对论</span>
+                  <span lang="rs">Специјална Теорија Релативности</span>
+                  <span lang="ru">Специальная Теория Oтносительности</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">General Theory of Relativity</span>
+                  <span lang="sr">Opšta Teorija Relativnosti</span>
+                  <span lang="ch">广义相对论</span>
+                  <span lang="rs">Општа Теорија Релативности</span>
+                  <span lang="ru">Общая Tеория Oтносительности</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span lang="en">Quantum Mechanics</span>
+              <span lang="sr">Kvantna Mehanika</span>
+              <span lang="ch">量子力学</span>
+              <span lang="rs">Квантна Механика</span>
+              <span lang="ru">Квантовая Механика</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Quantum Nature of Electromagnetic Radiation</span>
+                  <span lang="sr">Kvantna Priroda Elektromagnetnog Zračenja</span>
+                  <span lang="ch">电磁辐射的量子性质</span>
+                  <span lang="rs">Квантна Природа Електромагнетног Зрачења</span>
+                  <span lang="ru">Квантовая Природа Электромагнитного Излучения.</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Quantum Mechanics</span>
+                  <span lang="sr">Kvantna Mehanika</span>
+                  <span lang="ch">量子力学</span>
+                  <span lang="rs">Квантна Механика</span>
+                  <span lang="ru">Квантовая Mеханика</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Quantum Theory of Atom</span>
+                  <span lang="sr">Kvantna Teorija Atoma</span>
+                  <span lang="ch">原子的量子理论</span>
+                  <span lang="rs">Квантна Теорија Атома</span>
+                  <span lang="ru">Квантовая Tеория Aтома</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Probability Waves</span>
+                  <span lang="sr">Talasna Funkcija</span>
+                  <span lang="ch">概率波</span>
+                  <span lang="rs">Таласна Функција</span>
+                  <span lang="ru">Волновая Функция</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span lang="en">Particle Physics</span>
+              <span lang="sr">Nuklearna Fizika</span>
+              <span lang="ch">粒子物理学</span>
+              <span lang="rs">Нуклеарна Физика</span>
+              <span lang="ru">Ядерная Физика</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <Properties class="dropdown-item disabled" href="#">
+                  <span lang="en">Properties of Nucleus</span>
+                  <span lang="sr">Svojstva Jezgra</span>
+                  <span lang="ch">核的性质</span>
+                  <span lang="rs">Својства Језгра</span>
+                  <span lang="ru">Основные Свойства</span>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Radioactive Decay</span>
+                  <span lang="sr">Radioaktivni Raspad</span>
+                  <span lang="ch">放射性衰变</span>
+                  <span lang="rs">Радиоактивни Распад</span>
+                  <span lang="ru">Радиоактивный Распад</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">α, β and γ Decay</span>
+                  <span lang="sr">α, β i γ Raspad</span>
+                  <span lang="ch">α、β 和 γ 衰减</span>
+                  <span lang="rs">α, β и γ Распад</span>
+                  <span lang="ru">α, β и γ Распад</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Nuclear Reactions</span>
+                  <span lang="sr">Nuklearne Reakcije</span>
+                  <span lang="ch">核反应</span>
+                  <span lang="rs">Нуклеарне Реакције</span>
+                  <span lang="ru">Ядерные Реакции</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+
+        </ul>
+        <div class="header-left">
+          <a href="index.html" title="Home"><i class="fad fa-radiation-alt header-icon"></i></a>
+          <button class="button header-language">
+            <span lang="en" title="English"><img src="assets/engl.png" width="40px" height="28px"></span>
+            <span lang="sr" title="Serbian"><img src="assets/rs.png" width="40px" height="28px"></span>
+            <span lang="ch" title="Chinese"><img src="assets/chi.png" width="40px" height="28px"></span>
+            <span lang="rs" title="Serbian Cyrillic"><img src="assets/srb.jpg" width="40px" height="28px"></span>
+            <span lang="ru" title="Russian"><img src="assets/rus.png" width="40px" height="28px"></span>
+          </button>
+        </div>
+
+      </div>
+    </nav>
+
+  </header>
+  <!-- End Common Header -->
+
+  <div class="container">
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+            aria-expanded="true" aria-controls="collapseOne">
+            <span lang="en">What is the purpose of this website?</span>
+            <span lang="sr">Koja je svrha ovog sajta?</span>
+            <span lang="ch">这个网站的目的是什么？</span>
+            <span lang="rs">Која је сврха овог сајта?</span>
+            <span lang="ru">Какова цель этого сайта?</span>
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p>
+              <span lang="en">Purpose of this website is to present fundamental principles of physics in interactive and
+                engaging way. It contains various simulations combined with theory, formulas and
+                problems/exercises.</span>
+              <span lang="sr">Svrha ovog sajta je da prezentuje fundamentalne principe fizike na interaktivan i
+                privlačan način. Sajt sadrži brojne simulacije kombinovane sa teorijom, formulama i
+                problemima/zadacima.</span>
+              <span lang="ch">本网站的目的是以互动和引人入胜的方式展示物理学的基本原理。它包含与理论、公式和问题/练习相结合的各种模拟。</span>
+              <span lang="rs">Сврха овог сајта је да презентује фундаменталне принципе физике на интерактиван и
+                привлачан начин. Сајт садржи бројне симулације комбиноване са теоријом, формулама и
+                проблемима/задацима.</span>
+              <span lang="ru">Цель этого сайта - представить фундаментальные принципы физики в интерактивном и
+                привлекательный способ. Сайт содержит множество симуляций в сочетании с теорией, формулами и
+                проблемы / задачи.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <span lang="en">Who is the target audience of the website?</span>
+            <span lang="sr">Ko je ciljna grupa ovog sajta?</span>
+            <span lang="ch">谁是网站的目标受众？</span>
+            <span lang="rs">Ко је циљна група овог сајта?</span>
+            <span lang="ru">Кто является целевой группой этого сайта?</span>
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p>
+              <span lang="en">Primarily this website is intended for students regardless of their major. Any student who
+                encounters physics in during his studies can use this website to learn fundamental principles of
+                physics. This webiste is made for teachers to help them make their classes more interactive. Besides
+                these two groups, website can be used by any enthusiast who is passionate about physics.</span>
+              <span lang="sr">Sajt je primarno namenjen studentima bez obzira na njihovo usmerenje. Svaki student koji
+                se sretne sa fizikom tokom svojih studija može koristiti ovaj sajt da nauči fundamentalne principe
+                fizike. Ovaj sajt je napravljen i za profesore kako bi im omogućio da učine svoje časove
+                interaktivnijim. Osim ove dve grupe, sajt može koristiti bilo koji ljubitelj fizike. </span>
+              <span
+                lang="ch">本网站主要面向学生，无论其专业如何。任何在学习过程中遇到物理的学生都可以使用这个网站来学习物理的基本原理。这个网站是为教师制作的，旨在帮助他们提高课堂互动性。除了这两个群体之外，任何对物理充满热情的爱好者都可以使用网站。</span>
+              <span lang="rs">Сајт је примарно намењен студентима без обзира на њихово усмерење. Сваки студент који
+                се сретне са физиком током својих студија може користити овај сајт да научи фундаменталне принципе
+                физике. Овај сајт је направљен и за професоре како би им омогућио да учине своје часове
+                интерактивнијим. Осим ове две групе, сајт може користити било који љубитељ физике. </span>
+              <span lang="ru">Сайт в первую очередь предназначен для студентов независимо от их ориентации. Каждый студент, который
+                сталкивается с физикой во время учебы, может использовать этот сайт, чтобы узнать фундаментальные принципы
+                физика. Этот сайт также предназначен для преподавателей, чтобы они могли проводить свои занятия.
+                более интерактивный. Помимо этих двух групп, сайтом может пользоваться любой энтузиаст физики.</span>
+              </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <span lang="en">What curriculum does it follow?</span>
+            <span lang="sr">Koji nastavni program se koristi na ovom sajtu?</span>
+            <span lang="ch">它遵循什么课程？</span>
+            <span lang="rs">Који наставни програм се користи на овом сајту?</span>
+            <span lang="ru">Какая учебная программа используется на этом сайте?</span>
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p>
+              <span lang="en">This website follows the curriculum for <a
+                  href="http://www.ipho-new.org/statutes-syllabus/">"The International Physics Olympiad"</a>. Their
+                syllabus is considered to be the only relevant international benchmark.</span>
+              <span lang="sr">Ovaj sajt prati plan i program za <a
+                  href="http://www.ipho-new.org/statutes-syllabus/">"The International Physics Olympiad"</a>. Njihov
+                plan i program se jedini može uzeti za relevantan reper na međunarodnom nivou.</span>
+              <span lang="ch">本网站遵循以下课程 <a href="http://www.ipho-new.org/statutes-syllabus/">"The International Physics
+                  Olympiad"</a>. 他们的教学大纲被认为是唯一相关的国际基准。</span>
+              <span lang="rs">Овај сајт прати план и програм за <a
+                href="http://www.ipho-new.org/statutes-syllabus/">"The International Physics Olympiad"</a>. Њихов
+                план и програм се једини може узети за релевантан репер на међународном нивоу.</span>
+              <span lang="ru">Этот сайт следует плану и программе для <a
+                href = "http://www.ipho-new.org/statutes-syllabus/"> "The International Physics Olympiad"</a>. Их собственный
+                учебную программу можно рассматривать только в качестве эталона на международном уровне.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            <span lang="en">What topics are covered?</span>
+            <span lang="sr">Koje su oblasti obrađene?</span>
+            <span lang="ch">涵盖哪些主题？</span>
+            <span lang="rs">Које су области обрађене?</span>
+            <span lang="ru">Какие темы освещаются?</span>
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p>
+              <span lang="en">At the moment only Kinematics is covered. Other topics are comming soon. Our intention is
+                to cover whole curriculum.</span>
+              <span lang="sr">Trenutno je obrađena samo Kinematika. Druge oblasti će biti uskoro ubačene. Naša namera je
+                pokrijemo ceo plan i program.</span>
+              <span lang="ch">目前仅涵盖运动学。其他主题即将推出。我们的目的是涵盖整个课程。</span>
+              <span lang="rs">Тренутно је обрађена само Кинематика. Друге области ће бити ускоро убачене. Наша намера је
+                покријемо цео план и програм.</span>
+              <span lang="ru">На данный момент обработана только кинематика. Другие области будут добавлены в ближайшее время. Это наше намерение
+                покрываем весь план и программу.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            <span lang="en">Do you offer multilingual support?</span>
+            <span lang="sr">Da li je sajt dostupan na drugim jezicima?</span>
+            <span lang="ch">你们提供多语言支持吗？</span>
+            <span lang="rs">Да ли је сајт доступан на другим језицима?</span>
+            <span lang="ru">Доступен ли сайт на других языках?</span>
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p>
+              <span lang="en">Currently we support English, Serbian, Chinese and Russian language. Other languages are comming soon.</span>
+              <span lang="sr">Trenutno podržavamo Engleski, Srpski, Kineski i Ruski jezik. Uskoro će biti ubačeno još jezika.</span>
+              <span lang="ch">目前我们支持英语、塞尔维亚语和中文。其他语言即将推出。</span>
+              <span lang="rs">Тренутно подржавамо Енглески, Српски, Кинески и Руски језик. Ускоро ће бити убачено још језика.</span>
+              <span lang="ru">В настоящее время мы поддерживаем английский, сербский, китайский и русский языки. Скоро будут добавлены другие языки.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Common footer for every page. -->
+  <!-- Footer bar (containing 2 non-functioning links) using Bootstrap classes for styling. -->
+  <footer class="navbar fixed-bottom nav-tabs bg-white navbar-expand flex-column flex-sm-row justify-content-center">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link flex-sm-fill" href="about.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link flex-sm-fill active" href="faq.html">FAQ</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link flex-sm-fill" href="http://www.ipho-new.org/" target="_blank">iPhO</a>
+      </li>
+    </ul>
+  </footer>
+  <!-- End Common footer -->
+  <script src="scripts/language.js"></script>
+
+</body>
+
+</html>

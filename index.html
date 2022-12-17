@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+<!-- This head section contains all information about the page not visible directly to user. -->
+
+<head>
+  <!-- This is a title visible at a browser tab -->
+  <title>Physics Simulation</title>
+
+  <!-- Common Head for every page. -->
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- This is a description of page and author. This info could be used in SEO-->
+  <meta name="description" content="Physics Simulation - Index Page">
+  <meta name="author" content="Nikola Jelić">
+  <!-- Settings of viewport, its width and scale-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Keywords for search engines-->
+  <meta name="keywords" content="physics simulation science">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="style/bootstrap.min.css">
+
+  <!-- Custom CSS files -->
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="libraries/jquery-3.5.1.min.js"></script>
+  <script src="libraries/bootstrap.min.js"></script>
+  <!-- End Common Head. -->
+
+</head>
+
+<body>
+
+  <!-- Common Header for every page. -->
+  <header>
+
+    <nav class="navbar nav-pills navbar-expand-lg ">
+
+      <!-- Navigation bar links to other pages on this website -->
+      <div class="collapse navbar-collapse justify-content-center">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link flex-sm-fill active" href="index.html">
+              <span lang="en">Introduction to Physics</span>
+              <span lang="sr">Uvod u Fiziku</span>
+              <span lang="ch">物理学导论</span>
+              <span lang="rs">Увод у Физику</span>
+              <span lang="ru">Введение в Физику</span>
+            </a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span lang="en">Classical Mechanics</span>
+              <span lang="sr">Klasična Mehanika</span>
+              <span lang="ch">经典力学</span>
+              <span lang="rs">Класична Механика</span>
+              <span lang="ru">Классическая Механика</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="Kinematics.html">
+                  <span lang="en">Kinematics</span>
+                  <span lang="sr">Kinematika</span>
+                  <span lang="ch">运动学</span>
+                  <span lang="rs">Кинематика</span>
+                  <span lang="ru">Кинематика</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Statics</span>
+                  <span lang="sr">Statika</span>
+                  <span lang="ch">静力学</span>
+                  <span lang="rs">Статика</span>
+                  <span lang="ru">Статика</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Dynamics</span>
+                  <span lang="sr">Dinamika</span>
+                  <span lang="ch">动力学</span>
+                  <span lang="rs">Динамика</span>
+                  <span lang="ru">Динамика</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Celestial Mechanics</span>
+                  <span lang="sr">Nebeska Mehanika</span>
+                  <span lang="ch">天体力学</span>
+                  <span lang="rs">Небеска Механика</span>
+                  <span lang="ru">Небесная Механика</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Conservation Laws</span>
+                  <span lang="sr">Zakoni Održanja</span>
+                  <span lang="ch">保护法</span>
+                  <span lang="rs">Закони Одржања</span>
+                  <span lang="ru">Законы Обслуживания</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span lang="en">Electromagnetism</span>
+              <span lang="sr">Elektromagnetizam</span>
+              <span lang="ch">电磁学</span>
+              <span lang="rs">Електромагнетизам</span>
+              <span lang="ru">Электромагнетизм</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Electrostatics</span>
+                  <span lang="sr">Elektrostatika</span>
+                  <span lang="ch">静电学</span>
+                  <span lang="rs">Електростатика</span>
+                  <span lang="ru">Электростатика</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Direct Current (DC)</span>
+                  <span lang="sr">Jednosmerna Struja (DC)</span>
+                  <span lang="ch">直流电（DC）</span>
+                  <span lang="rs">Једносмерна Струја (DC)</span>
+                  <span lang="ru">Постоянный Tок (DC)</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Magnetism</span>
+                  <span lang="sr">Magnetizam</span>
+                  <span lang="ch">磁性</span>
+                  <span lang="rs">Магнетизам</span>
+                  <span lang="ru">Магнетизм</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Alternating Current (AC)</span>
+                  <span lang="sr">Naizmenična Struja (AC)</span>
+                  <span lang="ch">交流电 (AC)</span>
+                  <span lang="rs">Наизменична Струја (AC)</span>
+                  <span lang="ru">Переменный Tок (AC)</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span lang="en">Thermodynamics</span>
+              <span lang="sr">Termodinamika</span>
+              <span lang="ch">热力学</span>
+              <span lang="rs">Термодинамика</span>
+              <span lang="ru">Термодинамика</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Classical Termodinamika</span>
+                  <span lang="sr">Klasična Termodinamika</span>
+                  <span lang="ch">古典术语</span>
+                  <span lang="rs">Класична Термодинамика</span>
+                  <span lang="ru">Классическая Термодинамика</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Heat Transfer and Phase Transitions</span>
+                  <span lang="sr">Prenos Toplote i Fazni Prelazi</span>
+                  <span lang="ch">传热和相变</span>
+                  <span lang="rs">Пренос Топлоте и Фазни Прелази</span>
+                  <span lang="ru">Теплообмен и Фаазовые Переходы</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span lang="en">Theory of Relativity</span>
+              <span lang="sr">Teorija Relativnosti</span>
+              <span lang="ch">相对论</span>
+              <span lang="rs">Теорија Релативности</span>
+              <span lang="ru">Теория Относительности</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Special Theory of Relativity</span>
+                  <span lang="sr">Specijalna Teorija Relativnosti</span>
+                  <span lang="ch">狭义相对论</span>
+                  <span lang="rs">Специјална Теорија Релативности</span>
+                  <span lang="ru">Специальная Теория Oтносительности</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">General Theory of Relativity</span>
+                  <span lang="sr">Opšta Teorija Relativnosti</span>
+                  <span lang="ch">广义相对论</span>
+                  <span lang="rs">Општа Теорија Релативности</span>
+                  <span lang="ru">Общая Tеория Oтносительности</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span lang="en">Quantum Mechanics</span>
+              <span lang="sr">Kvantna Mehanika</span>
+              <span lang="ch">量子力学</span>
+              <span lang="rs">Квантна Механика</span>
+              <span lang="ru">Квантовая Механика</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Quantum Nature of Electromagnetic Radiation</span>
+                  <span lang="sr">Kvantna Priroda Elektromagnetnog Zračenja</span>
+                  <span lang="ch">电磁辐射的量子性质</span>
+                  <span lang="rs">Квантна Природа Електромагнетног Зрачења</span>
+                  <span lang="ru">Квантовая Природа Электромагнитного Излучения.</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Quantum Mechanics</span>
+                  <span lang="sr">Kvantna Mehanika</span>
+                  <span lang="ch">量子力学</span>
+                  <span lang="rs">Квантна Механика</span>
+                  <span lang="ru">Квантовая Mеханика</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Quantum Theory of Atom</span>
+                  <span lang="sr">Kvantna Teorija Atoma</span>
+                  <span lang="ch">原子的量子理论</span>
+                  <span lang="rs">Квантна Теорија Атома</span>
+                  <span lang="ru">Квантовая Tеория Aтома</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Probability Waves</span>
+                  <span lang="sr">Talasna Funkcija</span>
+                  <span lang="ch">概率波</span>
+                  <span lang="rs">Таласна Функција</span>
+                  <span lang="ru">Волновая Функция</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span lang="en">Particle Physics</span>
+              <span lang="sr">Nuklearna Fizika</span>
+              <span lang="ch">粒子物理学</span>
+              <span lang="rs">Нуклеарна Физика</span>
+              <span lang="ru">Ядерная Физика</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <Properties class="dropdown-item disabled" href="#">
+                  <span lang="en">Properties of Nucleus</span>
+                  <span lang="sr">Svojstva Jezgra</span>
+                  <span lang="ch">核的性质</span>
+                  <span lang="rs">Својства Језгра</span>
+                  <span lang="ru">Основные Свойства</span>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Radioactive Decay</span>
+                  <span lang="sr">Radioaktivni Raspad</span>
+                  <span lang="ch">放射性衰变</span>
+                  <span lang="rs">Радиоактивни Распад</span>
+                  <span lang="ru">Радиоактивный Распад</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">α, β and γ Decay</span>
+                  <span lang="sr">α, β i γ Raspad</span>
+                  <span lang="ch">α、β 和 γ 衰减</span>
+                  <span lang="rs">α, β и γ Распад</span>
+                  <span lang="ru">α, β и γ Распад</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled" href="#">
+                  <span lang="en">Nuclear Reactions</span>
+                  <span lang="sr">Nuklearne Reakcije</span>
+                  <span lang="ch">核反应</span>
+                  <span lang="rs">Нуклеарне Реакције</span>
+                  <span lang="ru">Ядерные Реакции</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+
+        </ul>
+        <div class="header-left">
+          <a href="index.html" title="Home"><i class="fad fa-radiation-alt header-icon"></i></a>
+          <button class="button header-language">
+            <span lang="en" title="English"><img src="assets/engl.png" width="40px" height="28px"></span>
+            <span lang="sr" title="Serbian"><img src="assets/rs.png" width="40px" height="28px"></span>
+            <span lang="ch" title="Chinese"><img src="assets/chi.png" width="40px" height="28px"></span>
+            <span lang="rs" title="Serbian Cyrillic"><img src="assets/srb.jpg" width="40px" height="28px"></span>
+            <span lang="ru" title="Russian"><img src="assets/rus.png" width="40px" height="28px"></span>
+          </button>
+        </div>
+
+      </div>
+    </nav>
+
+  </header>
+  <!-- End Common Header -->
+
+
+
+  <!-- This div is to group this part of the article in the Bootstrap container class
+         so it keeps a wide margin on either side of the content. -->
+  <div class="container">
+    <h1>
+      <span lang="en">Introduction to Physics</span>
+      <span lang="sr">Uvod u Fiziku</span>
+      <span lang="ch">物理学导论</span>
+      <span lang="rs">Увод у Физику</span>
+      <span lang="ru">Введение в Физику</span>
+    </h1>
+    <p>
+      <span lang="en">The word “physics” comes from the Ancient Greek word “φυσική” which means nature. Nature is
+        everything that surrounds us including ourselves. Physics studies “rules” by which everything in nature
+        “happens”.</span>
+      <span lang="sr">Reč "fizika" potiče od stare Grčke reči “φυσική” što znači priroda. Priroda je sve što nas
+        okružuje, uključujući i nas same. Fizika izučava “pravila” po kojima se u prirodi sve “događa”.</span>
+      <span lang="ch">“物理学”一词来自古希腊语“φυσική”，意思是自然。自然是我们周围的一切，包括我们自己。物理学研究自然界中一切事物“发生”的“规则”。</span>
+      <span lang="rs">Реч "физика" потиче од старе Грчке речи “φυσική” што значи природа. Природа је све што нас
+        окружује, укључујући и нас саме. Физика изучава “правила” по којима се у природи све “догађа”.</span>
+        <span lang="ru">Слово "физика" происходит от древнегреческого слова "φυσική", что означает природа. Природа для нас все
+          окружает, включая нас самих. Физика изучает «правила», по которым все «происходит» в природе.</span>
+    </p>
+    <p>
+      <span lang="en">Nature is made of matter. Matter is everything that exists. It exists objectively, independently
+        from our consciousness, and we observe/experience it with our senses. Present/modern understanding of physics
+        states that there are two forms of matter: chemical substance and field. Substance is everything that
+        constitutes bodies and the field is what “surrounds” those bodies.
+        Substance and field share some properties (e.g. they both have energy), but they also differ in some aspects
+        (e.g. there can be only one substance at one place at a given moment, while more than one field can be
+        present/exist at the same place/space).</span>
+      <span lang="sr">Priroda je sačinjena od materije. Materija je sve što postoji. Ona postoji objektivno, nezavisno
+        od naše svesti, dok je mi možemo posmatrati/iskusiti uz pomoć naših čula. Savremeno/moderno shvatanje fizike je
+        da postoje dve vrste/forme materije: hemijska supstanca i polje. Supstanca je sve ono što čini tela i prostor
+        koji “okružuje” ta tela.
+        Supstanca i polje dele neka svojstva (npr. oba imaju energiju), ali se takođe razlikuju u nekim aspektima (npr.
+        može postojati samo jedna materija na jednom mestu u datom trenutku, dok više polja može biti prisutno/postojati
+        u istom prostoru/mestu)</span>
+      <span
+        lang="ch">自然是由物质构成的。物质是存在的一切。它客观存在，独立于我们的意识，我们用我们的感官观察/体验它。目前/现代对物理学的理解表明物质有两种形式：化学物质和场。物质是构成物体的一切，场是“包围”这些物体的东西。
+        物质和场共享一些属性（例如它们都具有能量），但它们在某些方面也不同（例如在给定时刻一个地方只能有一种物质，而同时存在/存在多个场地方/空间）。</span>
+      <span lang="rs">Природа је сачињена од материје. Материја је све што постоји. Она постоји објективно, независно
+        од наше свести, док је ми можемо посматрати/искусити уз помоћ наших чула. Савремено/модерно схватање физике је
+        да постоје две врсте/форме материје: хемијска супстанца и поље. Супстанца је све оно што чини тела и простор
+        који “окружује” та тела.
+        Супстанца и поље деле нека својства (нпр. оба имају енергију), али се такође разликују у неким аспектима (нпр.
+        може постојати само једна материја на једном месту у датом тренутку, док више поља може бити присутно/постојати
+        у истом простору/месту)</span>
+      <span lang="ru">Природа состоит из материи. Материя - это все, что существует. Он существует объективно, независимо
+        из нашего сознания, в то время как мы можем наблюдать / испытывать это с помощью наших органов чувств. Это современное понимание физики
+        что существует два типа / формы материи: химическое вещество и поле. Вещество - это все, что составляет тела и пространство.
+        который «окружает» эти тела.
+        Вещество и поле обладают некоторыми общими свойствами (например, оба обладают энергией), но также различаются некоторыми аспектами (например,
+        в одном месте одновременно может быть только одно вещество, в то время как другие поля могут присутствовать / существовать
+        в том же пространстве / месте)</span>
+    </p>
+    <p>
+      <span lang="en">Matter is constantly changing and evolving in spacetime. That means that matter is constantly
+        moving. Everything that happens in nature is a consequence of mutual interactions between various forms of
+        matter. Some interactions happen through direct contact while others happen/transfer through the field.
+        Matter (both substance and field) is made of small particles, called elementary/fundamental particles. There are
+        various particles but there are three that are commonly known: electron, proton and neutron.
+        Physics studies: </span>
+      <span lang="sr">Materija se konstantno menja i evoluira u prostorvremenu. To znači da se materija konstantno
+        kreće. Sve što se dešava u prirodi je posledica međusobnih interakcija različitih formi materije. Neke
+        interakcije se dešavaju direktnim kontaktom dok se druge dešavaju/prenose putem polja.
+        Materija (supstanca i polje) je sačinjena od malih čestica, zvane elementarne/osnovne čestice. Postoje različite
+        čestice ali postoje tri koje su opšte poznate: elektron, proton i neutron.
+        Fizika proučava: </span>
+      <span lang="ch">物质在时空中不断变化和演化。这意味着物质在不断地运动。自然界中发生的一切都是各种形式物质之间相互作用的结果。一些互动是通过直接接触发生的，而另一些互动是通过现场发生/转移的。
+        物质（物质和场）由小粒子组成，称为基本粒子/基本粒子。粒子有很多种，但众所周知的有三种：电子、质子和中子。
+        物理研究：</span>
+      <span lang="rs">Материја се константно мења и еволуира у просторвремену. То значи да се материја константно
+        креће. Све што се дешава у природи је последица међусобних интеракција различитих форми материје. Неке
+        интеракције се дешавају директним контактом док се друге дешавају/преносе путем поља.
+        Материја (супстанца и поље) је сачињена од малих честица, зване елементарне/основне честице. Постоје различите
+        честице али постоје три које су опште познате: електрон, протон и неутрон.
+        Физика проучава: </span>
+      <span lang="ru">Материя постоянно изменяется и развивается в пространстве-времени. Это означает, что материя постоянна
+        движущийся. Все, что происходит в природе, является следствием взаимодействия различных форм материи. Некоторые
+        взаимодействия происходят посредством прямого контакта, в то время как другие происходят / передаются через поля.
+        Материя (вещество и поле) состоит из мелких частиц, называемых элементарными частицами. Есть разные
+        частиц, но есть три, которые общеизвестны: электрон, протон и нейтрон.
+        Физика:</span>
+
+    <ol>
+      <li>
+        <span lang="en">General properties and structure of matter</span>
+        <span lang="sr">Opšta svojstva i strukturu materije</span>
+        <span lang="ch">物质的一般性质和结构</span>
+        <span lang="rs">Општа својства и структуру материје</span>
+        <span lang="ru">Общие свойства и строение вещества</span>
+      </li>
+      <li>
+        <span lang="en">Movement of Matter (changes that affect matter)</span>
+        <span lang="sr">Kretanje Materije (promene koje utiču na materiju)</span>
+        <span lang="ch">物质的运动（影响物质的变化）</span>
+        <span lang="rs">Кретање Материје (промене које утичу на материју)</span>
+        <span lang="ru">Движение материи (изменения, влияющие на материю)</span>
+      </li>
+      <li>
+        <span lang="en">Rules by some movements happen and how are some natural phenomena interconnected</span>
+        <span lang="sr">Pravila po kojima se neka kretanje događaju i kako su neke prirodne pojave međusobno
+          povezane</span>
+        <span lang="ch">某些运动的规则发生以及某些自然现象如何相互关联</span>
+        <span lang="rs">Правила по којима се нека кретање догађају и како су неке природне појаве међусобно
+          повезане</span>
+          <span lang="ru">Правила, по которым происходят некоторые движения и как некоторые природные явления взаимосвязаны
+            связанные с</span>
+      </li>
+    </ol>
+    </p>
+
+
+  </div>
+
+  <!-- Common footer for every page. -->
+  <!-- Footer bar (containing 2 non-functioning links) using Bootstrap classes for styling. -->
+  <footer class="navbar fixed-bottom nav-tabs  bg-white navbar-expand flex-column flex-sm-row justify-content-center">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link flex-sm-fill" href="about.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link flex-sm-fill" href="faq.html">FAQ</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link flex-sm-fill" href="http://www.ipho-new.org/" target="_blank">iPhO</a>
+      </li>
+    </ul>
+  </footer>
+  <!-- End Common footer -->
+  <script src="scripts/language.js"></script>
+</body>
+
+</html>

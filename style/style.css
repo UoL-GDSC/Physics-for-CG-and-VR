@@ -1,0 +1,165 @@
+body {
+	background: rgb(255, 255, 255);
+	/* padding needed so that fixed footer does not overlap content */
+    padding-bottom: 80px;
+	font-family: 'Times New Roman', Times, sans-serif;
+}
+
+.card-img-top {
+	width: 400px;
+}
+
+.btnInstruction {
+	grid-area: btnInstruction;
+}
+.btnTheory {
+	grid-area: btnTheory;
+}
+.btnFormula {
+	grid-area: btnFormula;
+}
+.btnPractice {
+	grid-area: btnPractice;
+}
+.btn4 {
+	grid-area: btnPractice;
+}
+.canvas {
+	grid-area: canvas;
+}
+
+.canvasGrid {
+	margin: 10px;
+	display: grid;
+	place-items: center;
+	/* grid-template-columns: 1fr 7fr 1fr; */
+	grid-template-columns: auto;
+	grid-template-rows: auto;
+	grid-gap: 20px;
+	/* grid-template-areas:
+		'canvas btnTheory'
+		'canvas btnFormula'
+		'canvas btnPractice'
+		'canvas x '; */
+	/* grid-template-areas:
+		'canvas btnTheory'
+		'canvas btnFormula'
+		'canvas btnPractice'; */
+	/* grid-template-areas:
+		'btnTheory canvas'
+		'btnFormula canvas'
+		'btnPractice canvas'
+		'bntInstruction canvas'
+		'x canvas'
+		'x canvas'
+		'x canvas'; */
+	grid-template-areas:
+		'btnInstruction btnTheory btnFormula btnPractice'
+		'canvas canvas canvas canvas';
+}
+
+/*Nav bar color */
+nav {
+	background: rgb(255, 255, 255);
+}
+
+.nav-item {
+	font-size: 150%;
+}
+
+.dropdown-menu {
+	font-size: 100%;
+}
+
+
+/*Card separation and img centering*/
+.card {
+	padding: 10px;
+	margin: 5px;
+	width: 420px;
+}
+
+/*Better separation from cards*/
+h1 {
+	margin-top: 20px;
+	margin-bottom: 50px;
+	text-align: center;
+	font-size: 500%;
+
+}
+
+h2 {
+	font-size: 300%;
+}
+
+h3 {
+	font-size: 200%;
+}
+
+li {
+	font-size: 130%;
+}
+
+.accordion-button {
+	font-size: 100%;
+}
+
+p {
+	font-size: 150%;
+	text-align: justify;
+}
+
+ol {
+	margin-top: 75px;
+	font-size: 150%;
+}
+/*Lists appear too close to the border on modal boxes*/
+.modal-body {
+	margin: 10px;
+}
+
+/* Forcing the footer to stay down  */
+/* .staydown {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+} */
+
+.canvas {
+	position: relative;
+}
+
+.rounded{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+html {   /*code from here and to the bottom was used in one of my previous assignment (Web Development) Nikola Jelić */
+	background-color: var(--bg-color);
+	box-sizing: border-box;
+	/* Also set the default font */
+	font-family: var(--body-font);
+	font-size: var(--size-p);
+  }
+  
+  *, *:before, *:after {
+	box-sizing: inherit;
+  }
+  
+  /* Show english by default. Switching the language will set a different `lang`
+   * attribute on the <html> tag, which will show <span> tags with the relevant
+   * `lang` attribute
+   */
+  
+  span[lang] {
+	display: none;
+  }
+  
+  html[lang='en'] span[lang='en'],
+  html[lang='sr'] span[lang='sr'],
+  html[lang='ch'] span[lang='ch'],
+  html[lang='rs'] span[lang='rs'],
+  html[lang='ru'] span[lang='ru'] {
+	display: inline;
+  }

@@ -1,0 +1,1 @@
+function changeState(){stop=!stop,stop&&noLoop(),!stop&&loop();}
